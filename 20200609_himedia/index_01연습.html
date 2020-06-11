@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>하이미디어</title>
+	<style>
+		/*reset*/
+		*{margin: 0;padding: 0;box-sizing: border-box;}
+		a:link,a:visited{color: #000000;text-decoration: none;}
+		li{list-style:none;}
+		/*header*/
+		div.hdTop{width: 980px;height: 75px;margin: 0 auto;}
+		div.hdTop>h1.logo{text-align: center;line-height: 75px;}
+
+		div.gnbWrap{background-color:#1B65A6;}
+		div.gnbWrap>nav.gnbMenu{width: 980px;margin: 0 auto;}
+		div.gnbWrap>nav.gnbMenu>ul:after{
+			content: "";display:block;clear: both;}
+		div.gnbWrap>nav.gnbMenu>ul>li{float: left;width:163.3333px;border-right: 1px solid #F0F2F2;}
+		div.gnbWrap>nav.gnbMenu>ul>li>a{color:white;display: block;
+		    text-align: center;height: 45px;line-height: 45px;}
+		div.gnbWrap>nav.gnbMenu>ul>li:first-child{border-left: 1px solid #F0F2F2;}
+		div.gnvWrap>nav.gnbMenu>ul>li>a:hover{background-color: #F2C12E;}
+
+	</style>
+</head>
+<body>
+	<div class="hdTop">
+	<!-- h1.logo>a[#]{} -->
+		<h1 class="logo"><a href="#">하이미디어</a></h1>
+	</div>
+	<div class="gnbWrap">
+	<nav class="gnbMenu">
+	<!-- ul>li*6>a[#]{list$} -->
+	<ul>
+		<li><a href="#">list1</a></li>
+		<li><a href="#">list2</a></li>
+		<li><a href="#">list3</a></li>
+		<li><a href="#">list4</a></li>
+		<li><a href="#">list5</a></li>
+		<li><a href="#">list6</a></li>
+	</ul>
+	</nav>
+	</div>
+</body>
+</html>
