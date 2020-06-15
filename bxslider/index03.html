@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>bxslider</title>
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/jquery.bxslider.css">
+	<script src="js/jquery-3.1.1.min.js"></script>
+	<script src="js/jquery.bxslider.js"></script>
+	<script>
+		$(document).ready(function(){
+			var mySlider = $("#slider").bxSlider({  //var변수 대소문구분할것!
+				auto:true, //슬라이드 자동
+				// mode:"fade", //슬라이드 방향
+				controls:false, //pre next 버튼 사용안함
+				pager:false  //이동버튼 사용안함
+			});
+			
+
+			$(".nextBtn").click(function(){ // (){} 중요
+				mySlider.goToNextSlide(); 
+						});
+			$(".prevBtn").click(function(){
+				mySlider.goToPrevSlide();
+			});
+
+		});
+	</script>
+	<style>
+		#sliderWrap{
+			width: 1200px;margin: 0 auto;
+			position: relative;}
+		#slider img{width: 100%;}
+		.nextBtn,.prevBtn{position: absolute;top:50%;
+			width: 50px; margin-top: -50px;cursor: pointer;}
+		.prevtBtn{right:10px;}
+		.nextBtn{right:10px;}
+
+	</style>
+</head>
+<body>
+	<div id="sliderWrap"> <!--  por -->
+		<ul id="slider">
+			<!-- li*3>img[images/pc0$.jpg] -->
+			<li><img src="images/img01.jpg" alt=""></li>
+			<li><img src="images/img02.jpg" alt=""></li>
+		</ul>	
+		<div class="nextBtn">  <!-- poa -->
+			<img src="images/next.png" alt="">
+		</div>
+		<div class="prevBtn"> <!-- poa -->
+			<img src="images/prev.png" alt="">
+		</div>
+	</div>
+</body>
+</html>
